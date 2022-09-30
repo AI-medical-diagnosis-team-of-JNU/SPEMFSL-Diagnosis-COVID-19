@@ -16,4 +16,4 @@ https://www.who.int/health-topics/severe-acute-respiratory-syndrome#tab=tab_1   
 | viral pneumonia | 30 | 30 |  
 | COVID-19 positive | 30 | 30 |  
 
- The senior radiologist processed images and radiology reports, and achieved image augmentation.
+The senior radiologist processed images and radiology reports, and achieved image augmentation. Our radiologist is continuously processing and uploading images, radiology reports.
