@@ -1,10 +1,6 @@
 import numpy as np
 import pandas as pd
 
-img_height=100
-img_width=100
-channels=1
-
 #number of classes
 num_way=5
 #number of examples per class for support set
