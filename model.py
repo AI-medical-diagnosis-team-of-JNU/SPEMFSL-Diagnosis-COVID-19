@@ -36,7 +36,7 @@ def merge_model(input_1_shape, input_2_shape):
     r1 = model1.output
     r2 = model2.output
 
-    basal_1 = tf.keras.layers.Dense(32, activation='relu')(r2)
+    basal_1 = tf.keras.layers.Dense(128, activation='relu')(r2)
     basal_2 = tf.keras.layers.Dense(64, activation='sigmoid')(basal_1)
 
     x = tf.keras.layers.multiply([r1, basal_2])
