@@ -50,7 +50,7 @@ def train_step(support_set_images, query_set_images, support_set_radiology_repor
             train_f1.append(epoch_f1)
 
         #meta_batch_loss = tf.reduce_mean(tf.stack(train_loss))
-        meta_batch_loss = tf.add_n(train_loss))
+        meta_batch_loss = tf.add_n(train_loss)
         model.set_weights(meta_weights)
         outer_grads = query_t.gradient(meta_batch_loss, model.trainable_variables)
         outer_optimizer.apply_gradients(zip(outer_grads, model.trainable_variables))
