@@ -14,8 +14,10 @@ def create_model_images(input_1_shape):
     # inputs=tf.keras.Input(input_1_shape)
     layer = covn_base(input_1_shape)
     fla = tf.keras.layers.GlobalAveragePooling2D()(layer)
-    den1 = tf.keras.layers.Dense(128, activation='relu')(fla)
-    den2 = tf.keras.layers.Dense(64, activation='relu')(den1)
+    den1 = tf.keras.layers.Dense(128, activation='relu',kernel_regularizer=tf.keras.regularizers.l2(0.01),
+                                 bias_regularizer=tf.keras.regularizers.l1(0.01))(fla)
+    den2 = tf.keras.layers.Dense(64, activation='relu',kernel_regularizer=tf.keras.regularizers.l2(0.01),
+                                 bias_regularizer=tf.keras.regularizers.l1(0.01))(den1)
     model = tf.keras.models.Model(input_1_shape, den2)
     return model
 
