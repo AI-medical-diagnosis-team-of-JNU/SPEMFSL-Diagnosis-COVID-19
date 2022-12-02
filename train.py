@@ -3,11 +3,12 @@ import pandas as pd
 import tensorflow as tf
 from sklearn.metrics import f1_score,precision_score,recall_score
 
-inner_optimizer=tf.keras.optimizers.Adam(learning_rate_inner)
-outer_optimizer=tf.keras.optimizers.Adam(learning_rate_outer)
-
+batch=4
 inner_train_step=5
 update_test_step=3
+
+inner_optimizer=tf.keras.optimizers.Adam(learning_rate_inner)
+outer_optimizer=tf.keras.optimizers.Adam(learning_rate_outer)
 
 
 def train_step(support_set_images, query_set_images, support_set_radiology_report, query_set_radiology_report,
