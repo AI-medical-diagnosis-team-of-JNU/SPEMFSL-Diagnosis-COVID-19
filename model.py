@@ -2,8 +2,12 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-
+img_height=100
+img_width=100
+channels=3
 maxlen=128
+
+#InceptionV3
 covn_base=tf.keras.applications.InceptionV3(weights='imagenet',include_top=False)
 
 for layer in covn_base.layers:
