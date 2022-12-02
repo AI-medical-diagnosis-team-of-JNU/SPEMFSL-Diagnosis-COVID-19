@@ -1,15 +1,25 @@
 import numpy as np
 import pandas as pd
 
+all_num=5
+
 #number of classes
 num_way=5
+
 #number of examples per class for support set
 num_shot=1
+
 #number of query points
 num_query=5
 
 #task batch size
 batch=4
+
+img_height=100
+img_width=100
+channels=3
+
+maxlen=128
 
 
 # data process
@@ -26,7 +36,7 @@ def few_shot(dataset_images, dataset_radiology_report, number):
     query_labels = np.zeros([batch, num_way * num_query], dtype=np.int32)
 
     for i in range(batch):
-        episodic_classes = np.random.permutation(train_num)[:num_way]
+        episodic_classes = np.random.permutation(all_num)[:num_way]
         # support_set
         support_images = np.zeros([num_way, num_shot, img_height, img_width, channels],
                                   dtype=np.float32)
