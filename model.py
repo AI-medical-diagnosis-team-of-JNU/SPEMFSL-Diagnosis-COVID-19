@@ -2,9 +2,8 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-img_height=100
-img_width=100
-channels=3
+
+num_words=2000
 maxlen=128
 
 #InceptionV3
